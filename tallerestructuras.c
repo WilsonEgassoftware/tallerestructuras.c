@@ -4,8 +4,8 @@ struct alumno// creamos la estructura alumno
 {
   int matricula;
   char nombre[50];//declaramos la función nombre como caracter
-  char direccion[50];//declaramosla funcion direccion com carcter
-  char carrera[50];
+  char direccion[50];//declaramosla funcion direccion com caracter
+  char carrera[50];//declaramos la funcion caracter
   float promedio;//declaramos como decimal
 };
 void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que recibe un puntero a una estructura alumno 
