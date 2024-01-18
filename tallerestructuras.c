@@ -22,7 +22,10 @@ void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que
  gets(alumno->direccion);
  fflush(stdin);
  
-
+  printf("Ingrese la carrera: ");
+  gets(alum->carrera);
+  fflush(stdin);
+  
   printf("Ingrese el promedio: ");
   scanf("%f", &alumno->promedio);
   fflush(stdin);
