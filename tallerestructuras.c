@@ -53,8 +53,8 @@ int main()
   printf("\nDatos ingresados:\n");
   for (int i = 0; i < n; i++) //Realizamos un bucel para cada uno de los alumnos 
   {
-    printf("\nDatos del alumno %d:\n", i + 1);
-    mostrarDatos(&alumnos[i]);
+    printf("\nDatos del alumno %d:\n", i + 1);//Imprimimos  los datos del alumno
+    mostrarDatos(&alumnos[i]);// se llama a la funcion para imprimir los datos
   }
   return 0;
 }
