@@ -3,9 +3,9 @@
 struct alumno// creamos la estructura alumno
 {
   int matricula;
-  char nombre[50];
-  char direccion[50];
-  float promedio;
+  char nombre[50];//declaramos la función nombre como caracter
+  char direccion[50];//declaramosla funcion direccion com carcter
+  float promedio;//declaramos como decimal
 };
 void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que recibe un puntero a una estructura alumno 
 {
@@ -13,7 +13,7 @@ void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que
   scanf("%d", &alumno->matricula);// scanf para leer un entero 
   fflush(stdin); // Limpiar memoeria
 
-  printf("Ingrese el nombre: ");
+  printf("Ingrese el nombre: ");// pedimos el ingreso de datos revisando la struct alumno
   gets(alumno->nombre);
   fflush(stdin);
 
@@ -27,7 +27,7 @@ void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que
   fflush(stdin);
 }
 
-void mostrarDatos(struct alumno *alumno)//lamamos a la funcion struc alumno para que se pueda reemplazar
+void mostrarDatos(struct alumno *alumno)//definimos los principales cambio del struct
 {
   printf("\nMatricula: %d\n", alumno->matricula);// Pedimos el ingreso de la estructura para poder pasar los datos
   printf("Nombre: %s\n", alumno->nombre);
@@ -40,18 +40,18 @@ int main()
   int n;
 
   printf("Ingrese el numero de alumnos: ");
-  scanf("%d", &n);
-  fflush(stdin);//liberamos espacio de memoeria
-  struct alumno alumnos[n];
+  scanf("%d", &n);//decalramos n para almancenar la cantidad de alumnos
+  fflush(stdin);//liberamos espacio de memoria
+  struct alumno alumnos[n];//arreglo llamado alumnos para saber us cantidad
 
-  for (int i = 0; i < n; i++) //vericamos con la cantidad total de alumnos y se elgira cualquier cantidad 
+  for (int i = 0; i < n; i++) //realiamos un bucle depende de la cantidad de alumnos
   {
     printf("\nIngreso de datos para el alumno %d:\n", i + 1);
-   ingresarDatos(&alumnos[i]);
+   ingresarDatos(&alumnos[i]);//llamamos a la funcion Ingresar datos para recopilar los datos 
   }
 
   printf("\nDatos ingresados:\n");
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++) //Realizamos un bucel para cada uno de los alumnos 
   {
     printf("\nDatos del alumno %d:\n", i + 1);
     mostrarDatos(&alumnos[i]);
