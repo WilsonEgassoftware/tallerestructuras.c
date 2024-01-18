@@ -23,7 +23,7 @@ void ingresarDatos(struct alumno *alumno)//Define una función ingresarDatos que
  fflush(stdin);
  
   printf("Ingrese la carrera: ");
-  gets(alum->carrera);
+  gets(alumno->carrera);
   fflush(stdin);
   
   printf("Ingrese el promedio: ");
@@ -36,6 +36,7 @@ void mostrarDatos(struct alumno *alumno)//definimos los principales cambio del s
   printf("\nMatricula: %d\n", alumno->matricula);// Pedimos el ingreso de la estructura para poder pasar los datos
   printf("Nombre: %s\n", alumno->nombre);
   printf("Direccion: %s\n", alumno->direccion);
+  printf("Carrera: %s\n", alumno->carrera);
   printf("Promedio: %.2f\n", alumno->promedio);
 }
 
